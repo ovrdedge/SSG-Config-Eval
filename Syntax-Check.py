@@ -1,6 +1,9 @@
-array = []
-for i in range(0,5):
-    array.append({})
-    array[i] = {'name': 'Bob'}
-    print(array[i]['name'])
-print(array)
+i = 0
+loop = True
+while loop:
+    print("i = " + str(i))
+    if i >= 5:
+        loop = False
+
+    i += 1
+
