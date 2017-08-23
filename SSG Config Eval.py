@@ -358,20 +358,6 @@ for line in addgroup_config:
     # Incrementing i
     i += 1
 
-# Processing interface config.
-i = 0
-interface_objects = []
-for line in interface_config:
-
-    # Grabbing the original line in case i need to display to user.
-    original_line = line
-
-    # Expanding array
-    addgroup_objects.append({})
-
-    # Incrementing i
-    i += 1
-
 # Processing policy config. This loop is different than the previous ones. This will generate a 3 dimensional array.
 # It also has a forward looking scan of the policy_config array since additional items are declared on following lines.
 # First dimension is an array with each rule getting its own index.
@@ -528,4 +514,19 @@ while loop:
     if i >= 20:
         loop = False
 
+# Processing interface config.
+i = 0
+interface_objects = []
+for line in interface_config:
+
+    # Grabbing the original line in case i need to display to user.
+    original_line = line
+
+    # Expanding array
+    addgroup_objects.append({})
+
+    # Incrementing i
+    i += 1
+
 time.sleep(1)
+
